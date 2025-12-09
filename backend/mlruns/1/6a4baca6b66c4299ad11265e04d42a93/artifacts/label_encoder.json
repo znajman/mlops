@@ -1,0 +1,1 @@
+{"class_to_int": {"acc": 0, "good": 1, "unacc": 2, "vgood": 3}, "int_to_class": {"0": "acc", "1": "good", "2": "unacc", "3": "vgood"}}

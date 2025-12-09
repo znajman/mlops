@@ -1,0 +1,44 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.14
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.3.0
+mlflow_version: 2.17.0
+model_size_bytes: 945112
+model_uuid: 5c2da962bb9c41de909e40e3755e518e
+run_id: 6a4baca6b66c4299ad11265e04d42a93
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "buying_high", "required": true}, {"type":
+    "double", "name": "buying_low", "required": true}, {"type": "double", "name":
+    "buying_med", "required": true}, {"type": "double", "name": "buying_vhigh", "required":
+    true}, {"type": "double", "name": "maint_high", "required": true}, {"type": "double",
+    "name": "maint_low", "required": true}, {"type": "double", "name": "maint_med",
+    "required": true}, {"type": "double", "name": "maint_vhigh", "required": true},
+    {"type": "double", "name": "doors_2", "required": true}, {"type": "double", "name":
+    "doors_3", "required": true}, {"type": "double", "name": "doors_4", "required":
+    true}, {"type": "double", "name": "doors_5more", "required": true}, {"type": "double",
+    "name": "persons_2", "required": true}, {"type": "double", "name": "persons_4",
+    "required": true}, {"type": "double", "name": "persons_more", "required": true},
+    {"type": "double", "name": "lug_boot_big", "required": true}, {"type": "double",
+    "name": "lug_boot_med", "required": true}, {"type": "double", "name": "lug_boot_small",
+    "required": true}, {"type": "double", "name": "safety_high", "required": true},
+    {"type": "double", "name": "safety_low", "required": true}, {"type": "double",
+    "name": "safety_med", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2025-12-09 20:22:58.645963'
