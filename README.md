@@ -3,8 +3,12 @@
 Self-contained exam project that combines MLflow tracking + registry, Flask REST API, Docker image, Airflow DAGs, Evidently reports, and Streamlit dashboards using the UCI Car Evaluation dataset.
 
 ## Folder layout
-- `backend/` – API + model code, data, Airflow DAGs, Dockerfile, tests.
+- `backend/` – notebooks, API + model code, data, Airflow DAGs, Dockerfile, tests.
 - `monitoring/` – Streamlit apps, Evidently scripts/reports, train/test CSVs.
+
+## Notebooks
+Find them in `vizsgafeladat/backend/notebooks/`:
+- `Car_Data_Preparation.ipynb` and `Car_Data_Understanding.ipynb` for the initial dataset exploration/preparation walkthroughs.
 
 ## Backend quickstart (MLflow + REST API)
 Use Python 3.10/3.11 (or 3.9) for the smoothest install; Python 3.12 removes `distutils`, so if you must stay on 3.12 install `distutils` from your package manager first.
@@ -12,8 +16,7 @@ Use Python 3.10/3.11 (or 3.9) for the smoothest install; Python 3.12 removes `di
 cd ~/cubix/vizsgafeladat/backend
 deactivate 2>/dev/null || true
 rm -rf .venv
-python3.11 -m venv .venv
-source .venv/bin/activate
+python3.11 -m venv .venv && source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt mlflow==2.17.0
 # If you’re using a different Python version, swap constraints-3.11 for your version (e.g., constraints-3.10.txt)
